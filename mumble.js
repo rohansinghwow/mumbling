@@ -1,28 +1,24 @@
-function funCapatalize(letter,num){
+function capital(letter,num){
     let result = "";
     for(let i=0;i<num;i++){
-      if(i===0){
-        result += letter.toUpperCase();
-      }
-      else{
-        result += letter.toLowerCase();
-      }
-      
+      result += i === 0 ? letter.toUpperCase(): letter.toLowerCase();
     }
     return result;
+    console.log(result);
+    
   }
   
-  function mumblingInput(str){
+  function accum(str){
     let result = "";
-    let letters=str.split("")
+    let letters = str.split("")
     
     let counter = 1;
   
     for(let letter of letters){
-      result += funCapatalize(letter,counter)
+      result += capital(letter,counter);
       counter ++;
     }
     return result;
   }
 
-  mumblingInput("abcd");
+  accum("abcd");
